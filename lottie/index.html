@@ -9,34 +9,23 @@
       .wrapper {
         width: 600px;
       }
-      video {
-        width: 100%;
-      }
     </style>
   </head>
   <body>
     <div class="wrapper">
-      <p>
-        <a
-          href="https://legalforce-cloud.com/business/introduce"
-          target="_blank"
-          >https://legalforce-cloud.com/business/introduce</a
-        >で使用しているパッケージで検証
-      </p>
-      <lottie-player
-        src="https://lottie.host/83bb3767-04de-4d09-9e5a-de37b77ca3c8/t40TK8fbqM.json"
+      <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"
+      ></script>
+
+      <dotlottie-player
+        src="https://lottie.host/b1568413-a55a-41b2-897d-c03f9509d8c7/k3QN3SrwRl.json"
         background="transparent"
         speed="1"
         style="width: 100%; height: auto"
         loop
         autoplay
-      ></lottie-player>
+      ></dotlottie-player>
     </div>
-    <div class="wrapper">
-      <p>videoタグでmp4ループ</p>
-      <video playsinline muted autoplay loop src="./sample.mp4">
-      </video>
-    </div>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
