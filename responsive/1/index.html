@@ -30,20 +30,15 @@
         padding: 10px;
       }
       ul {
-        width: 1000px;
-        margin-inline: auto;
         display: grid;
-        grid-template-columns: repeat(3, 320px);
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-      }
-      li {
-        width: 100%;
       }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <h2>カラム幅を決め打った場合</h2>
+      <h2>グリッドをビューポートに収め続けた場合</h2>
       <ul>
         <li>
           <img src="https://picsum.photos/id/110/1600/900" />
