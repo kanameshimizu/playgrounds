@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>microCMS</title>
+    <style>
+      img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <img id="main-visual" src="" />
+    <div id="contents"></div>
+    <script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+    <script>
+      const { createClient } = microcms;
+
+      const client = createClient({
+        serviceDomain: "kanameshimizu", // service-domain は XXXX.microcms.io の XXXX 部分
+        apiKey: "KrVDerePj6Y51bALZddHPUHCZgiBcgzOWhuo",
+      });
+      client.get({ endpoint: "seminar" }).then((res) => {
+        document.querySelector("#title").textContent = res.title;
+        document.querySelector("#main-visual").src = res["main-visual"].url;
+        document.querySelector("#contents").innerHTML = res.contents;
+      });
+    </script>
+  </body>
+</html>
