@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>breakpoint</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        display: block;
+      }
+      img {
+        width: 1000px;
+      }
+
+      @media (width < 1000px) {
+        img {
+          width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>要素サイズを絶対値で指定</h2>
+    <img src="https://picsum.photos/id/100/1600/900" />
+  </body>
+</html>
